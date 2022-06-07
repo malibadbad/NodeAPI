@@ -31,7 +31,7 @@ const getBooks = (req, res) => {
 
   const updateBook = (req, res) => {
     Book.findOneAndUpdate(
-      { book_id: req.params.book_ID },
+      { book_ID: req.params.book_ID },
       {
         $set: {
             book_ID: req.body.book_ID,
