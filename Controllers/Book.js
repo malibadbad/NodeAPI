@@ -48,7 +48,7 @@ const getBooks = (req, res) => {
   };
 
   const deleteBook = (req, res) => {
-    Book.deleteOne({ book_id: req.params.book_ID })
+    Book.deleteOne({ book_ID: req.params.book_ID })
       .then(() => res.json({ message: "Book Deleted" }))
       .catch((err) => res.send(err));
   };
