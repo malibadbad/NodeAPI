@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(router);
 
 mongoose
-  .connect(process.env.MONGODB_URL, {
+  .connect("mongodb+srv://merrybeth:12345@5425-labs.nyll9un.mongodb.net/?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
