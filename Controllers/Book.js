@@ -1,3 +1,4 @@
+const { ObjectID } = require("bson");
 const Book = require("../Model/Book");
 
 
@@ -12,12 +13,10 @@ const getBooks = (req, res) => {
   
   const createBook = (req, res) => {
     const book = new Book({
+        _id: new ObjectID,
         book_ID: req.body.book_ID,
         title: req.body.title,
-        author: {
-            first_name: req.body.author.first_name,
-            last_name: req.body.author.last_name
-        }, 
+        author: req.body.author,
         isbn: req.body.isbn,
     });
   

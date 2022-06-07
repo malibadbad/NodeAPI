@@ -1,5 +1,6 @@
 const { ObjectId } = require("bson");
 const mongoose = require("mongoose");
+const { stringify } = require("querystring");
 
 const BookSchema = new mongoose.Schema({
     _id: {
@@ -12,12 +13,7 @@ const BookSchema = new mongoose.Schema({
         type: String,
     },
     author: {
-        first_name: {
-            type: String,
-        },
-        last_name: {
-            type: String,
-        },
+        type: String,
     },
     isbn: {
         type: Number,
