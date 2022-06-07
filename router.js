@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { getBooks, createBook, updateBook, deleteBook } = require("./controllers/Book");
+const { getBooks, createBook, updateBook, deleteBook } = require("./Controllers/Book");
 
 
 router.get("/", (req, res) => {
